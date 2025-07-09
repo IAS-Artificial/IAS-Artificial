@@ -174,7 +174,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: introFadeOut 3s forwards 2.5s;
+  animation: introFadeOut 1.2s forwards 1s;
 }
 #intro-screen img {
   width: 140px;
@@ -199,63 +199,7 @@
 </head>
 <body>
 <div id="intro-screen">
-  
-<svg width="100%" height="150" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg" style="background: transparent;">
-  <style>
-    .text {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 50px;
-      fill: none;
-      stroke: #00e5ff;
-      stroke-width: 1.5;
-      stroke-dasharray: 500;
-      stroke-dashoffset: 500;
-      animation: draw 2.5s ease-out forwards;
-    }
-
-    .subtitle {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 20px;
-      fill: #00e5ff;
-      opacity: 0;
-      animation: fadein 2s ease-in forwards;
-      animation-delay: 2.5s;
-    }
-
-    @keyframes draw {
-      to {
-        stroke-dashoffset: 0;
-        fill: #00e5ff;
-      }
-    }
-
-    @keyframes fadein {
-      to {
-        opacity: 1;
-      }
-    }
-
-    .circuit {
-      stroke: #00e5ff;
-      stroke-width: 2;
-      fill: none;
-      stroke-dasharray: 200;
-      stroke-dashoffset: 200;
-      animation: draw 3s ease-out forwards;
-    }
-  </style>
-
-  <!-- Circuit-style lines -->
-  <path class="circuit" d="M 50 80 H 150 L 160 70 M 150 80 L 160 90" />
-  <path class="circuit" d="M 650 80 H 550 L 540 70 M 550 80 L 540 90" />
-
-  <!-- Logo text -->
-  <text x="250" y="85" class="text">I-A-S Artificial</text>
-
-  <!-- Subtitle -->
-  <text x="290" y="120" class="subtitle">Productora de Contenidos IA</text>
-</svg>
-
+  <img src="a-sleek-logo-design-showcasing-the-initi_ZS3O2GY1SC6YU6vf-xXQuQ_MoQMjsx1RR-gy1tm5rCiGw.jpeg" alt="IAS Logo Animado" />
   <h1>Entrando al universo de I-A-S Artificial</h1>
 </div>
 
@@ -344,7 +288,7 @@
 <script>
   window.addEventListener("load", function () {
     const loader = document.getElementById("loader");
-    if (loader) loader.style.display = "none";
+    if (loader) setTimeout(() => loader.style.display = "none", 800);
   });
 </script>
 
@@ -367,7 +311,7 @@
 
   window.addEventListener("load", function () {
     const loader = document.getElementById("loader");
-    if (loader) loader.style.display = "none";
+    if (loader) setTimeout(() => loader.style.display = "none", 800);
   });
 </script>
 </body>
