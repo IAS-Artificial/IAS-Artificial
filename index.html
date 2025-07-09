@@ -5,41 +5,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I-A-S Artificial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0a0a0a;
-      color: #ffffff;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
     }
     header {
-      background-color: #000000;
-      padding: 20px;
       text-align: center;
-      border-bottom: 2px solid #00bfff;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-bottom: 2px solid #00e5ff;
     }
     header img {
-      max-width: 200px;
-      height: auto;
-      display: block;
-      margin: 0 auto 10px;
+      max-width: 180px;
+      margin-bottom: 10px;
     }
     header h1 {
-      margin: 0;
       font-size: 2.5rem;
-      color: #00bfff;
-    }
-    nav {
-      margin-top: 10px;
+      color: #00e5ff;
+      text-shadow: 0 0 10px #00e5ffaa;
     }
     nav a {
-      color: #ffffff;
-      margin: 0 15px;
+      margin: 0 12px;
+      color: #e0e0e0;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00e5ff;
     }
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 960px;
       margin: auto;
     }
@@ -47,39 +57,114 @@
       text-align: center;
     }
     .hero h2 {
-      font-size: 2rem;
-      color: #00bfff;
+      color: #00e5ff;
+      text-shadow: 0 0 8px #00e5ff77;
     }
     .cta {
-      background-color: #00bfff;
+      background-color: #00e5ff;
       color: #000;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border-radius: 6px;
       text-decoration: none;
+      font-weight: bold;
       display: inline-block;
       margin-top: 20px;
-      font-weight: bold;
+      box-shadow: 0 0 12px #00e5ff88;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 12px #00e5ff88; }
+      50% { box-shadow: 0 0 20px #00e5ffaa; }
+      100% { box-shadow: 0 0 12px #00e5ff88; }
     }
     .services ul {
       list-style: none;
       padding: 0;
     }
     .services li {
-      background-color: #1a1a1a;
+      background: rgba(255,255,255,0.05);
       margin: 10px 0;
       padding: 15px;
-      border-left: 4px solid #00bfff;
+      border-left: 4px solid #00e5ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .services li:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px #00e5ff55;
     }
     footer {
-      background-color: #111;
+      background: #0d0d0d;
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-      color: #999;
+      color: #888;
     }
-  </style>
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+  
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .lds-ring {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+    .lds-ring div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      margin: 8px;
+      border: 6px solid #00e5ff;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #00e5ff transparent transparent transparent;
+    }
+    .lds-ring div:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    .lds-ring div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    .lds-ring div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+    @keyframes lds-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    </style>
+
 </head>
 <body>
+  
+<div id="loader">
+  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>
+<div id="particles-js"></div>
+
+
   <header>
     <img src="a-sleek-logo-design-showcasing-the-initi_ZS3O2GY1SC6YU6vf-xXQuQ_MoQMjsx1RR-gy1tm5rCiGw.jpeg" alt="Logo IAS Artificial" />
     <h1>I-A-S Artificial</h1>
@@ -116,11 +201,49 @@
     <h2>Contacto</h2>
     <p>📍 Rufino - Santa Fe - Argentina</p>
     <p>📞 Contacto: 3382480029</p>
-    <p>📧 Email: contacto@iasartificial.com</p>
   </section>
 
   <footer>
     &copy; 2025 I-A-S Artificial. Todos los derechos reservados.
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 60 },
+        color: { value: '#00e5ff' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.6 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#00e5ff',
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: 'none',
+          out_mode: 'bounce'
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: 'grab' }
+        }
+      }
+    });
+  </script>
+
+<script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    if (loader) loader.style.display = "none";
+  });
+</script>
 </body>
+
 </html>
