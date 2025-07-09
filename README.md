@@ -1,16 +1,27 @@
-## Hi there 👋
+# I-A-S Artificial
 
-<!--
-**IAS-Artificial/IAS-Artificial** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**I-A-S Artificial** es una productora de contenido audiovisual potenciada por inteligencia artificial, con base en *Rufino, Santa Fe, Argentina*.
 
-Here are some ideas to get you started:
+### 🚀 ¿Qué hacemos?
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Creamos contenido de alta calidad utilizando herramientas de IA generativa, ideal para:
+
+- Videos institucionales y publicitarios
+- Avatares virtuales y presentadores automáticos
+- Locuciones y subtitulados automáticos
+- Catálogos para e-commerce
+- Contenido personalizado para redes sociales
+
+### 🎯 Nuestra misión
+
+Reducir los tiempos y costos de producción audiovisual, sin resignar creatividad ni profesionalismo.
+
+### 📍 Contacto
+
+- 📞 3382480029  
+- 📧 contacto@iasartificial.com  
+- 🌐 Sitio web disponible en GitHub Pages una vez publicado
+
+---
+
+Hecho con ❤️ en Argentina por **Ariel Sanini**
