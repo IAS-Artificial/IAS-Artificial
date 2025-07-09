@@ -2,10 +2,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta name="description" content="Productora de contenidos con inteligencia artificial. Videos, locuciones, avatares y más. Rufino - Santa Fe - Argentina.">
-  <meta name="keywords" content="IA, inteligencia artificial, contenidos, videos IA, locuciones IA, Argentina, Santa Fe, Rufino">
-  <meta name="author" content="Ariel Sanini">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I-A-S Artificial</title>
@@ -158,15 +154,118 @@
         transform: rotate(360deg);
       }
     }
-    </style>
+    
+    #vanta-bg {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    
+#intro-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: introFadeOut 3s forwards 2.5s;
+}
+#intro-screen img {
+  width: 140px;
+  animation: pulseLogo 2s infinite;
+}
+#intro-screen h1 {
+  color: #00e5ff;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px #00e5ff88;
+}
+@keyframes introFadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+@keyframes pulseLogo {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+</style>
+
 
 </head>
 <body>
+<div id="intro-screen">
+  
+<svg width="100%" height="150" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg" style="background: transparent;">
+  <style>
+    .text {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 50px;
+      fill: none;
+      stroke: #00e5ff;
+      stroke-width: 1.5;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: draw 2.5s ease-out forwards;
+    }
+
+    .subtitle {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 20px;
+      fill: #00e5ff;
+      opacity: 0;
+      animation: fadein 2s ease-in forwards;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+        fill: #00e5ff;
+      }
+    }
+
+    @keyframes fadein {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .circuit {
+      stroke: #00e5ff;
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: draw 3s ease-out forwards;
+    }
+  </style>
+
+  <!-- Circuit-style lines -->
+  <path class="circuit" d="M 50 80 H 150 L 160 70 M 150 80 L 160 90" />
+  <path class="circuit" d="M 650 80 H 550 L 540 70 M 550 80 L 540 90" />
+
+  <!-- Logo text -->
+  <text x="250" y="85" class="text">I-A-S Artificial</text>
+
+  <!-- Subtitle -->
+  <text x="290" y="120" class="subtitle">Productora de Contenidos IA</text>
+</svg>
+
+  <h1>Entrando al universo de I-A-S Artificial</h1>
+</div>
+
   
 <div id="loader">
   <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 </div>
-<div id="particles-js"></div>
+
+<div id="vanta-bg"></div>
+
 
 
   <header>
@@ -248,6 +347,30 @@
     if (loader) loader.style.display = "none";
   });
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.cells.min.js"></script>
+<script>
+  VANTA.CELLS({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.0,
+    scaleMobile: 1.0,
+    color1: 0x00e5ff,
+    color2: 0x0d0d0d,
+    size: 2.0,
+    speed: 1.5
+  });
+
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    if (loader) loader.style.display = "none";
+  });
+</script>
 </body>
+
 
 </html>
