@@ -19,7 +19,7 @@ Reducir los tiempos y costos de producción audiovisual, sin resignar creativida
 ### 📍 Contacto
 
 - 📞 3382480029  
-- 📧 contacto@iasartificial.com  
+- 📧 sanigio259@gmail.com 
 - 🌐 Sitio web disponible en GitHub Pages una vez publicado
 
 ---
